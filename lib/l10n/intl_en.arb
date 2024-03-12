@@ -1,0 +1,16 @@
+{
+    "@@locale": "en",
+    "amount": "{total}",
+  "@amount": {
+    "placeholders": {
+      "total": {
+        "type": "double",
+        "format": "currency",
+        "optionalParameters": {
+          "symbol": "$",
+          "decimalDigits": 2
+        }
+      }
+    }
+  }
+}
