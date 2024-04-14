@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:payment_app/features/checkout/presentation/screens/my_cart_screen.dart';
+import 'package:payment_app/core/router/app_router.dart';
+import 'package:payment_app/core/router/app_router_paths.dart';
 import 'package:payment_app/generated/l10n.dart';
 
 class PaymentApp extends StatelessWidget {
@@ -25,7 +26,8 @@ class PaymentApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const MyCartScreen(),
+        initialRoute: AppRouterPaths.home,
+        onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:payment_app/core/helpers/app_assets.dart';
 import 'package:payment_app/core/helpers/spacing.dart';
+import 'package:payment_app/core/router/app_router_paths.dart';
 import 'package:payment_app/core/themes/colors_manager.dart';
 import 'package:payment_app/core/widgets/custom_appbar.dart';
 import 'package:payment_app/core/widgets/custom_button.dart';
@@ -41,7 +42,11 @@ class MyCartScreen extends StatelessWidget {
             verticalSpace(20),
             const TotalAmount(totalAmount: 50.97),
             verticalSpace(20),
-            CustomButton(buttonText: 'Complete Payment', onTap: () {})
+            CustomButton(
+                buttonText: 'Complete Payment',
+                onTap: () {
+                  Navigator.pushNamed(context, AppRouterPaths.details);
+                })
           ],
         ),
       ),

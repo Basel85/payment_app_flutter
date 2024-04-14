@@ -12,8 +12,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: SvgPicture.asset(
-        AppAssets.backButton,
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: SvgPicture.asset(
+          AppAssets.backButton,
+        ),
       ),
       backgroundColor: ColorsManager.transparentColor,
       centerTitle: true,
