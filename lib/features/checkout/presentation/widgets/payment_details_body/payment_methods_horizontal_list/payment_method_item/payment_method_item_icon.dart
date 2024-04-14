@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PaymentMethodItemIcon extends StatelessWidget {
@@ -12,7 +11,6 @@ class PaymentMethodItemIcon extends StatelessWidget {
     return Center(
       child: SvgPicture.asset(
         paymentMethodIconAsset,
-        height: 24.h,
       ),
     );
   }
